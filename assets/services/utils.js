@@ -32,7 +32,7 @@ export function mapWeatherToWeek(weather) {
   return days;
 }
 
-export function determineWeather(icon = '') {
+export function selectWeather(icon = '') {
   icon = icon.toLowerCase();
 
   switch (true) {
@@ -55,7 +55,7 @@ export function determineWeather(icon = '') {
   }
 }
 
-export function determineIcon(icon = '') {
+export function selectIcon(icon = '') {
   icon = icon.toLowerCase();
 
   switch (true) {

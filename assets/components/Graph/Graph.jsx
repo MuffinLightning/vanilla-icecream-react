@@ -7,19 +7,19 @@ export default class Graph extends Component {
     super(props);
   }
 
-  normaliseData(data) {
+  normalize(data) {
     let temperatures = data.map(hour => convertDisplay(hour.temperature));
 
-    let ratio = Math.max.apply(Math, temperatures) / 100;
+    let r = Math.max.apply(Math, temperatures) / 100;
 
     for (let i = 0; i < temperatures.length; i++) {
-      data[i].percent = Math.round(temperatures[i] / ratio);
+      data[i].percent = Math.round(temperatures[i] / r);
     }
   }
 
   render() {
 
-    this.normaliseData(this.props.data);
+    this.normalize(this.props.data);
 
     return (
       <div class="Graph">

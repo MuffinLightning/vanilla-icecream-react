@@ -15,7 +15,7 @@ import {
   getLocality,
   mapWeatherToWeek,
   convert,
-  determineWeather
+  selectWeather
 } from 'services/utils';
 
 export default class App extends Component {
@@ -42,7 +42,7 @@ export default class App extends Component {
     });
   }
 
-  setTemp(temp) {
+  setTemperature(temp) {
     this.setState({
       temp
     }, () => {
@@ -70,9 +70,9 @@ export default class App extends Component {
             <div class={classNames('app', determineWeather(this.state.weather.currently.icon))}>
 
               <div class="temp-toggle">
-                <span onClick={() => this.setTemp('c')} class={classNames({active: temp === 'c'})}>C</span>
+                <span onClick={() => this.setTemperature('c')} class={classNames({active: temp === 'c'})}>C</span>
                 <em>/</em>
-                <span onClick={() => this.setTemp('f')} class={classNames({active: temp === 'f'})}>F</span>
+                <span onClick={() => this.setTemperature('f')} class={classNames({active: temp === 'f'})}>F</span>
               </div>
 
               <div class="summary">
