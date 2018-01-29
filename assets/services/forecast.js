@@ -1,6 +1,6 @@
 import { ajax } from 'jquery';
 
-const API_KEY = '0257d902bce70bfc8d0d023ca9560ed8';
+const API_KEY = 'YOUR_KEY';
 
 export default {
 
