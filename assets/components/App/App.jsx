@@ -67,7 +67,7 @@ export default class App extends Component {
       <div>
         {this.state.loading ? <Loader loading /> :
           <div>
-            <div class={classNames('app', determineWeather(this.state.weather.currently.icon))}>
+            <div class={classNames('app', selectWeather(this.state.weather.currently.icon))}>
 
               <div class="temp-toggle">
                 <span onClick={() => this.setTemperature('c')} class={classNames({active: temp === 'c'})}>C</span>
